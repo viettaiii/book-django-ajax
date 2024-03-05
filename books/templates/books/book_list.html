@@ -5,6 +5,14 @@
 {% block javascript %}
   <script src="{% static 'books/js/books.js' %}"></script>
 {% endblock %}
+{% block header %}
+<nav class="navbar container-fluid bg-secondary">
+  <div class="container d-flex justify-content-between w-100">
+    <a class="navbar-brand d-block text-white" href="#">Leadplus</a>
+    <a class="navbar-brand d-block text-white" href="#">Logout</a>
+  </div>
+</nav>
+{% endblock %}
 
 {% block content %}
   <h1 class="page-header">Books</h1>

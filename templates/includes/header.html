@@ -1,21 +1,27 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'home' %}">Bookstore</a>
+{% load static %}
+
+<div class="container w-50 mt-5 d-flex flex-column gap-2">
+  <!-- Header -->
+  <div class="d-flex justify-content-between header align-items-center">
+    <!-- Logo -->
+    <div class="d-flex gap-2 align-items-center">
+      <div>
+        <div class="card header__logo">
+          <img
+            src="{% static 'images/logo.png' %}"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="header__vertical-line"></div>
+      <!-- Title -->
+      <h3 class="header__status">Status</h3>
     </div>
-    <div class="collapse navbar-collapse" id="main-menu">
-      <ul class="nav navbar-nav">
-        <li{% if request.path == '/books/' %} class="active"{% endif %}>
-          <a href="{% url 'book_list' %}">Books</a>
-        </li>
-        <li><a href="https://simpleisbetterthancomplex.com">simpleisbetterthancomplex.com</a></li>
-      </ul>
+    <!-- Button -->
+    <div>
+      <button class="btn btn-danger header__btn">Past incidents</button>
     </div>
   </div>
-</nav>
+  <!-- Body -->
+</div>
