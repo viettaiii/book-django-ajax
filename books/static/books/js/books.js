@@ -38,6 +38,11 @@ $(function () {
 
   /* Binding */
 
+  // close the modal
+  $("#modal-book").on("click", "#btn-close-modal", function () {
+    $("#modal-book").modal("hide");
+  });
+
   // Create book
   $(".js-create-book").click(loadForm);
   $("#modal-book").on("submit", ".js-book-create-form", saveForm);
