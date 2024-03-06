@@ -19,9 +19,17 @@
       <h3 class="header__status">Status</h3>
     </div>
     <!-- Button -->
-    <div>
-      <button class="btn btn-danger header__btn">Past incidents</button>
-    </div>
+    
+    {% if request.path == '/' %} 
+      <a href="{% url 'history' %}">
+        <button class="btn btn-danger header__btn">Past Incidents</button>
+      </a>
+    {% elif request.path == '/history/' or request.path == '/detail/' %} 
+      <a href="{% url 'home' %}">
+        <button class="btn btn-danger header__btn">Return to home page</button>
+      </a>
+    {% endif %}
+    
   </div>
   <!-- Body -->
 </div>
