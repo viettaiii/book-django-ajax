@@ -18,7 +18,6 @@ $(function () {
 
   var saveForm = function () {
     var form = $(this);
-    (data = form.serialize()), console.log(data);
     $.ajax({
       url: form.attr("action"),
       data: data,
