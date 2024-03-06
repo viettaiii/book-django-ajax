@@ -6,14 +6,8 @@
   <script src="{% static 'books/js/books.js' %}"></script>
 {% endblock %}
 {% block header %}
-<nav class="navbar container-fluid bg-secondary">
-  <div class="container d-flex justify-content-between w-100">
-    <a class="navbar-brand d-block text-white" href="#">Leadplus</a>
-    <a class="navbar-brand d-block text-white" href="#">Logout</a>
-  </div>
-</nav>
+  {% include 'books/includes/header.html' %}
 {% endblock %}
-
 
 {% block content %}
 <div class='container '>
